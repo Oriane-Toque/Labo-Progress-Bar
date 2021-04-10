@@ -159,14 +159,12 @@ p > strong {
 
 /* =============== CIRCLE LEVEL BAR =============== */
 .levelbarsCircle {
-  width: 10rem;
-  height: 10rem;
   transform: rotateZ(-90deg);
 }
 
-.levelbarsCircleblue {
-  width: 10rem;
-  height: 10rem;
+.-circle_hg_wd {
+  width: 11rem;
+  height: 11rem;
 }
 
 @keyframes loadBlueCircleBar {
@@ -175,7 +173,7 @@ p > strong {
   }
 }
 
-.levelbarsCircleblue circle {
+.levelbarsCircleblue circle:nth-of-type(2) {
   /* fill définit ici le fond de la forme */
   fill: none;
 
@@ -193,8 +191,15 @@ p > strong {
   stroke-linecap: round;
 
   /* permet un translation du cercle sur l'axe x/y */
-  transform: translate(0.625rem, 0.625rem);
+  transform: translate(1rem, 1rem);
   animation: loadBlueCircleBar 2s steps(440) forwards;
+}
+
+.borderCircle_blue {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #00655f;
+  transform: translate(1rem, 1rem);
 }
 
 @keyframes loadRedCircleBar {
@@ -203,20 +208,22 @@ p > strong {
   }
 }
 
-.levelbarsCirclered {
-  width: 10rem;
-  height: 10rem;
-}
-
-.levelbarsCirclered circle {
+.levelbarsCirclered circle:nth-of-type(2) {
   fill: none;
   stroke-width: 1.25rem;
   stroke: #cd5c5c;
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
   stroke-linecap: round;
-  transform: translate(0.625rem, 0.625rem);
+  transform: translate(1rem, 1rem);
   animation: loadRedCircleBar 2s steps(440) forwards;
+}
+
+.borderCircle_red {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #6f0016;
+  transform: translate(1rem, 1rem);
 }
 
 @keyframes loadYellowCircleBar {
@@ -225,20 +232,22 @@ p > strong {
   }
 }
 
-.levelbarsCircleyellow {
-  width: 10rem;
-  height: 10rem;
-}
-
-.levelbarsCircleyellow circle {
+.levelbarsCircleyellow circle:nth-of-type(2) {
   fill: none;
   stroke-width: 1.25rem;
   stroke: #f2f748;
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
   stroke-linecap: round;
-  transform: translate(0.625rem, 0.625rem);
+  transform: translate(1rem, 1rem);
   animation: loadYellowCircleBar 2s steps(440) forwards;
+}
+
+.borderCircle_yellow {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #dd8c00;
+  transform: translate(1rem, 1rem);
 }
 
 @keyframes loadGreenCircleBar {
@@ -247,18 +256,20 @@ p > strong {
   }
 }
 
-.levelbarsCirclegreen {
-  width: 10rem;
-  height: 10rem;
-}
-
-.levelbarsCirclegreen circle {
+.levelbarsCirclegreen circle:nth-of-type(2) {
   fill: none;
   stroke-width: 1.25rem;
   stroke: #48f761;
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
   stroke-linecap: round;
-  transform: translate(0.625rem, 0.625rem);
+  transform: translate(1rem, 1rem);
   animation: loadGreenCircleBar 2s steps(440) forwards;
+}
+
+.borderCircle_green {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #094;
+  transform: translate(1rem, 1rem);
 }
