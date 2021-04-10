@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#levelbar {
+  margin: 0.625rem;
+}
+
+.levelbarRect {
+  display: flex;
+  align-items: center;
+  width: 12rem;
+  height: 2rem;
+  padding: 0.2rem;
+  border: solid 1.5px #008;
+  border-radius: 0.25rem;
+}
+
+@keyframes loadLevel {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+.levelbarRect_level {
+  width: 0;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  animation: loadLevel 2s 500ms normal forwards;
+}
+
+.-blue {
+  background-color: #088;
+}
