@@ -13,12 +13,29 @@
     <!-- 1- créer un conteneur contenant les barres de niveau
          2- créer un conteneur avec un id = rectangulaire
          3- créer un conteneur interne au précédent qui sera remplis représentant le niveau -->
-        
-    <div id="levelbar">
-      <div class="levelbarRect">
-        <div class="levelbarRect_level -blue"></div>
+    <div id="container">
+
+      <!-- Rectangular Level Bar -->
+      <div id="levelbarRect">
+        <!-- Blue Level Bar -->
+        <div class="levelbarRect -borderBlue">
+          <div class="levelbarRect_level -blue"></div>
+        </div>
+        <!-- Red Level Bar -->
+        <div class="levelbarRect -borderRed">
+          <div class="levelbarRect_level -red"></div>
+        </div>
+        <!-- Yellow Level Bar -->
+        <div class="levelbarRect -borderYellow">
+          <div class="levelbarRect_level -yellow"></div>
+        </div>
+        <!-- Green Level Bar -->
+        <div class="levelbarRect -borderGreen">
+          <div class="levelbarRect_level -green"></div>
+        </div>        
       </div>
-    </div>
+
+    </div>    
 
   </body>
 

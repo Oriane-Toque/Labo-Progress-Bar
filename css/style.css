@@ -9,21 +9,48 @@ body {
   padding: 0;
 }
 
-#levelbar {
-  margin: 0.625rem;
+/* =============== RECTANGULAR LEVEL BAR =============== */
+
+/* Media screen conditions / Levelbars positioning */
+@media (min-width: 900px) {
+  #levelbarRect {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+#levelbarRect {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Levelbars positioning */
 .levelbarRect {
   display: flex;
-  align-items: center;
   width: 12rem;
   height: 2rem;
-  padding: 0.2rem;
-  border: solid 1.5px #008;
   border-radius: 0.25rem;
 }
 
-@keyframes loadLevel {
+/* Different border color */
+.-borderBlue {
+  border: solid 0.3rem #00655f;
+}
+
+.-borderRed {
+  border: solid 0.3rem #6f0016;
+}
+
+.-borderYellow {
+  border: solid 0.3rem #f2f900;
+}
+
+.-borderGreen {
+  border: solid 0.3rem #094;
+}
+
+/* Steps loading animation */
+@keyframes loadLevelBlue {
   0% {
     width: 0;
   }
@@ -33,13 +60,58 @@ body {
   }
 }
 
-.levelbarRect_level {
-  width: 0;
-  height: 1.5rem;
-  border-radius: 0.25rem;
-  animation: loadLevel 2s 500ms normal forwards;
+@keyframes loadLevelRed {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 90%;
+  }
 }
 
+@keyframes loadLevelYellow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes loadLevelGreen {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+/* Initial width's level bar */
+.levelbarRect_level {
+  width: 0;
+}
+
+/* Background-colors & animation properties */
 .-blue {
-  background-color: #088;
+  background-color: #48f7ed;
+  animation: loadLevelBlue 2s 500ms normal forwards;
+}
+
+.-red {
+  background-color: #cd5c5c;
+  animation: loadLevelRed 2s 500ms normal forwards;
+}
+
+.-yellow {
+  background-color: #f2f748;
+  animation: loadLevelYellow 2s 500ms normal forwards;
+}
+
+.-green {
+  background-color: #48f761;
+  animation: loadLevelGreen 2s 500ms normal forwards;
 }
