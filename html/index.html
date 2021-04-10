@@ -15,24 +15,52 @@
          3- créer un conteneur interne au précédent qui sera remplis représentant le niveau -->
     <div id="container">
 
+      <header>
+        <h1>Funny <strong>levelbars css</strong></h1>
+        <p><strong>Refresh</strong> to see it</p>
+      </header>
+
       <!-- Rectangular Level Bar -->
-      <div id="levelbarRect">
+      <div class="levelbars">
         <!-- Blue Level Bar -->
-        <div class="levelbarRect -borderBlue">
-          <div class="levelbarRect_level -blue"></div>
+        <div class="levelbarsRect -borderRectBlue">
+          <div class="levelbarsRect_level -blue"></div>
         </div>
         <!-- Red Level Bar -->
-        <div class="levelbarRect -borderRed">
-          <div class="levelbarRect_level -red"></div>
+        <div class="levelbarsRect -borderRectRed">
+          <div class="levelbarsRect_level -red"></div>
         </div>
         <!-- Yellow Level Bar -->
-        <div class="levelbarRect -borderYellow">
-          <div class="levelbarRect_level -yellow"></div>
+        <div class="levelbarsRect -borderRectYellow">
+          <div class="levelbarsRect_level -yellow"></div>
         </div>
         <!-- Green Level Bar -->
-        <div class="levelbarRect -borderGreen">
-          <div class="levelbarRect_level -green"></div>
+        <div class="levelbarsRect -borderRectGreen">
+          <div class="levelbarsRect_level -green"></div>
         </div>        
+      </div>
+
+      <div class="levelbars">
+        <div class="levelbarsCircle">
+          <svg class="levelbarsCircleblue">
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+        </div>
+        <div class="levelbarsCircle">
+          <svg class="levelbarsCirclered">
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+        </div>
+        <div class="levelbarsCircle">
+          <svg class="levelbarsCircleyellow">
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+        </div>
+        <div class="levelbarsCircle">
+          <svg class="levelbarsCirclegreen">
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+        </div>
       </div>
 
     </div>    

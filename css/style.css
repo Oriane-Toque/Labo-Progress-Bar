@@ -7,25 +7,66 @@
 body {
   margin: 0;
   padding: 0;
+  background: #303d41;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* =============== HEADER =============== */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: solid 3px #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: #cd5c5c;
+}
+
+h1 > strong {
+  color: #48f7ed;
+}
+
+p {
+  font-size: 2rem;
+  color: #f2f748;
+  font-style: italic;
+}
+
+p > strong {
+  color: #48f761;
+  font-weight: normal;
 }
 
 /* =============== RECTANGULAR LEVEL BAR =============== */
 
 /* Media screen conditions / Levelbars positioning */
 @media (min-width: 900px) {
-  #levelbarRect {
+  .levelbars {
     display: flex;
     flex-direction: column;
   }
 }
 
-#levelbarRect {
+.levelbars {
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 9rem;
+}
+
+.levelbars:first-of-type {
+  margin-top: 2rem;
 }
 
 /* Levelbars positioning */
-.levelbarRect {
+.levelbarsRect {
   display: flex;
   width: 12rem;
   height: 2rem;
@@ -33,20 +74,20 @@ body {
 }
 
 /* Different border color */
-.-borderBlue {
-  border: solid 0.3rem #00655f;
+.-borderRectBlue {
+  border: solid 0.25rem #00655f;
 }
 
-.-borderRed {
-  border: solid 0.3rem #6f0016;
+.-borderRectRed {
+  border: solid 0.25rem #6f0016;
 }
 
-.-borderYellow {
-  border: solid 0.3rem #f2f900;
+.-borderRectYellow {
+  border: solid 0.25rem #dd8c00;
 }
 
-.-borderGreen {
-  border: solid 0.3rem #094;
+.-borderRectGreen {
+  border: solid 0.25rem #094;
 }
 
 /* Steps loading animation */
@@ -91,7 +132,7 @@ body {
 }
 
 /* Initial width's level bar */
-.levelbarRect_level {
+.levelbarsRect_level {
   width: 0;
 }
 
@@ -114,4 +155,92 @@ body {
 .-green {
   background-color: #48f761;
   animation: loadLevelGreen 2s 500ms normal forwards;
+}
+
+/* =============== CIRCLE LEVEL BAR =============== */
+.levelbarsCircle {
+  width: 10rem;
+  height: 10rem;
+  transform: rotateZ(-90deg);
+}
+
+.levelbarsCircleblue {
+  width: 10rem;
+  height: 10rem;
+}
+
+@keyframes loadCircleBar {
+  100% {
+    stroke-dashoffset: 66;
+  }
+}
+
+.levelbarsCircleblue circle {
+  /* fill définit ici le fond de la forme */
+  fill: none;
+
+  /* définit la largeur du contour */
+  stroke-width: 1.25rem;
+
+  /* définit la couleur du contour */
+  stroke: #48f7ed;
+
+  /* permet de dessiner le contour */
+  stroke-dasharray: 440;
+
+  /* permet de définir le point de départ du dessin */
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+
+  /* permet un translation du cercle sur l'axe x/y */
+  transform: translate(0.625rem, 0.625rem);
+  animation: loadCircleBar 2s steps(440) forwards;
+}
+
+.levelbarsCirclered {
+  width: 10rem;
+  height: 10rem;
+}
+
+.levelbarsCirclered circle {
+  fill: none;
+  stroke-width: 1.25rem;
+  stroke: #cd5c5c;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(0.625rem, 0.625rem);
+  animation: loadCircleBar 2s steps(440) forwards;
+}
+
+.levelbarsCircleyellow {
+  width: 10rem;
+  height: 10rem;
+}
+
+.levelbarsCircleyellow circle {
+  fill: none;
+  stroke-width: 1.25rem;
+  stroke: #f2f748;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(0.625rem, 0.625rem);
+  animation: loadCircleBar 2s steps(440) forwards;
+}
+
+.levelbarsCirclegreen {
+  width: 10rem;
+  height: 10rem;
+}
+
+.levelbarsCirclegreen circle {
+  fill: none;
+  stroke-width: 1.25rem;
+  stroke: #48f761;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(0.625rem, 0.625rem);
+  animation: loadCircleBar 2s steps(440) forwards;
 }
