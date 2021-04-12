@@ -23,7 +23,7 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 7rem;
+  font-size: calc(4rem / 2);
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -35,7 +35,7 @@ h1 > strong {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #f2f748;
   font-style: italic;
 }
@@ -52,6 +52,14 @@ p > strong {
   .levelbars {
     display: flex;
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
   }
 }
 
@@ -76,18 +84,22 @@ p > strong {
 /* Different border color */
 .-borderRectBlue {
   border: solid 0.25rem #00655f;
+  background-color: #00655f;
 }
 
 .-borderRectRed {
   border: solid 0.25rem #6f0016;
+  background-color: #6f0016;
 }
 
 .-borderRectYellow {
   border: solid 0.25rem #dd8c00;
+  background-color: #dd8c00;
 }
 
 .-borderRectGreen {
   border: solid 0.25rem #094;
+  background-color: #094;
 }
 
 /* Steps loading animation */
@@ -272,4 +284,109 @@ p > strong {
   stroke-width: 2rem;
   stroke: #094;
   transform: translate(1rem, 1rem);
+}
+
+.levelbarsSquare {
+  transform: rotateZ(-45deg);
+}
+
+.-rect_hg_wd {
+  width: 11rem;
+  height: 11rem;
+}
+
+@keyframes loadBlueSquareBar {
+  100% {
+    stroke-dashoffset: 85;
+  }
+}
+
+.levelbarsSquareblue rect:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #48f7ed;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: square;
+  transform: translate(0, -1rem);
+  animation: loadBlueSquareBar 2s steps(440) forwards;
+}
+
+.borderSquare_blue {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #00655f;
+  transform: translate(0, -1rem);
+}
+
+@keyframes loadRedSquareBar {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.levelbarsSquarered rect:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #cd5c5c;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: square;
+  transform: translate(0, -1rem);
+  animation: loadRedSquareBar 2s steps(440) forwards;
+}
+
+.borderSquare_red {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #6f0016;
+  transform: translate(0, -1rem);
+}
+
+@keyframes loadYellowSquareBar {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+
+.levelbarsSquareyellow rect:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #f2f748;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: square;
+  transform: translate(0, -1rem);
+  animation: loadYellowSquareBar 2s steps(440) forwards;
+}
+
+.borderSquare_yellow {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #dd8c00;
+  transform: translate(0, -1rem);
+}
+
+@keyframes loadGreenSquareBar {
+  100% {
+    stroke-dashoffset: 225;
+  }
+}
+
+.levelbarsSquaregreen rect:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #48f761;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: square;
+  transform: translate(0, -1rem);
+  animation: loadGreenSquareBar 2s steps(440) forwards;
+}
+
+.borderSquare_green {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #094;
+  transform: translate(0, -1rem);
 }
