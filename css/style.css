@@ -286,6 +286,7 @@ p > strong {
   transform: translate(1rem, 1rem);
 }
 
+/* =====================SQUARE LEVELBARS====================== */
 .levelbarsSquare {
   transform: rotateZ(-45deg);
 }
@@ -389,4 +390,107 @@ p > strong {
   stroke-width: 2rem;
   stroke: #094;
   transform: translate(0, -1rem);
+}
+
+/* =================PENTAGON LEVELBARS================= */
+
+.levelbarsPentagon {
+  transform: rotateZ(-108deg);
+}
+
+.-penta_hg_wd {
+  width: 13rem;
+  height: 13rem;
+}
+
+@keyframes loadBluePentaBar {
+  100% {
+    stroke-dashoffset: 85;
+  }
+}
+
+.levelbarsPentagonblue polygon:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #48f7ed;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation: loadBluePentaBar 2s steps(440) forwards;
+}
+
+.borderPenta_blue {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #00655f;
+}
+
+@keyframes loadRedPentaBar {
+  100% {
+    stroke-dashoffset: 148;
+  }
+}
+
+.levelbarsPentagonred polygon:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #cd5c5c;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation: loadRedPentaBar 2s steps(440) forwards;
+}
+
+.borderPenta_red {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #6f0016;
+}
+
+@keyframes loadYellowPentaBar {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.levelbarsPentagonyellow polygon:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #f2f748;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation: loadYellowPentaBar 2s steps(440) forwards;
+}
+
+.borderPenta_yellow {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #dd8c00;
+}
+
+@keyframes loadGreenPentaBar {
+  100% {
+    stroke-dashoffset: 315;
+  }
+}
+
+.levelbarsPentagongreen polygon:nth-of-type(2) {
+  fill: none;
+  stroke-width: 1.2rem;
+  stroke: #48f761;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation: loadGreenPentaBar 2s steps(440) forwards;
+}
+
+.borderPenta_green {
+  fill: none;
+  stroke-width: 2rem;
+  stroke: #094;
 }
